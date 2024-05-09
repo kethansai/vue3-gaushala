@@ -80,6 +80,7 @@
           v-for="(navItem, index) of navigation"
           :key="index"
           :to="navItem.path"
+          @click="toggle = false"
         >
           {{ navItem.name }}
         </router-link>

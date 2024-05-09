@@ -1,6 +1,6 @@
 <template>
   <div id="home-page" class="p-4">
-    <el-carousel :interval="5000" arrow="always">
+    <el-carousel class="sm:h-1/2 md:h-full" :interval="5000" arrow="always">
       <el-carousel-item
         class="bg-cover bg-center bg-no-repeat"
         v-for="item of images"
@@ -93,6 +93,11 @@ const images = [slider1, slider2, slider3, slider4, slider5]
   min-height: calc(100vh - 128px);
   .el-carousel__container {
     height: calc(100vh - 128px);
+  }
+  @media screen and (max-width: 612px) {
+    .el-carousel__container {
+      height: calc(100vh - 620px);
+    }
   }
 }
 </style>
